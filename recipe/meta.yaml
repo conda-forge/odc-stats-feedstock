@@ -50,7 +50,7 @@ requirements:
 
 test:
   imports:
-    - odc_stats
+    - odc
   commands:
     - pip check
     - odc-stats --help
