@@ -25,6 +25,7 @@ requirements:
     - pip
   run:
     - python >=3.8
+    - aiobotocore
     - botocore
     - click >=8.0.0
     - dask-core
