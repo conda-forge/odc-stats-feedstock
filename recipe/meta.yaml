@@ -1,5 +1,5 @@
 {% set name = "odc-stats" %}
-{% set version = "1.0.32" %}
+{% set version = "1.0.33" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/odc-stats-{{ version }}.tar.gz
-  sha256: a598937d4db64389c7d4e504e1042ba75226340924ba08ee753d1fddba92c473
+  sha256: c008ade24a48169a2bbe764d3b398afbfa3e0afa91971ff46906268b9107fbc5
 
 build:
   entry_points:
     - odc-stats = odc.stats.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
