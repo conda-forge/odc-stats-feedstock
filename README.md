@@ -1,11 +1,11 @@
-About odc-stats
-===============
+About odc-stats-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/odc-stats-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/opendatacube/odc-stats/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/odc-stats-feedstock/blob/main/LICENSE.txt)
 
 Summary: Statistical Product Generation Framework
 
