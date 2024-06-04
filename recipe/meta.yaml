@@ -1,13 +1,13 @@
 {% set name = "odc-stats" %}
-{% set version = "1.0.38" %}
+{% set version = "1.0.44" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/odc-stats-{{ version }}.tar.gz
-  sha256: 7cac64278e570ac5dec0c1c0f2f2fb19cf265a937228427f94e3c446a7398e36
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6a31d82fea8a971be86ecb69089155d92382e9dd48bed0c994b5309d762c79af
 
 build:
   entry_points:
