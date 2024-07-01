@@ -14,7 +14,7 @@ build:
     - odc-stats = odc.stats.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -34,7 +34,7 @@ requirements:
     - numpy
     - odc-cloud
     - odc-algo
-    - odc-dscache >=0.2.2
+    - odc-dscache >=0.2.3
     - odc-io
     - odc-stac
     - pandas
