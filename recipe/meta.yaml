@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 1fbb8949b4cbee5d53faa2a4f4605e1486ee431a6d8d2b90e73de7dfaeb04cd0
 
 build:
@@ -14,17 +14,17 @@ build:
     - odc-stats = odc.stats.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=51.0.0
     - wheel
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - aiobotocore
     - botocore
     - click >=8.0.0
@@ -57,6 +57,7 @@ test:
     - odc-stats --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/opendatacube/odc-stats/
